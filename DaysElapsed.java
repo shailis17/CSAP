@@ -69,21 +69,21 @@ public class DaysElapsed
     }
   }
     
-    private static boolean isLeapYear(int y)
+  private static boolean isLeapYear(int y)
+  {
+    boolean isLeap = false;
+    if(y%4 == 0)
     {
-      boolean isLeap = false;
-      if(y%4 == 0)
+      isLeap = true;
+      if(y%100 == 0)
       {
-        isLeap = true;
-        if(y%100 == 0)
+        isLeap = false;
+        if(y%400 == 0)
         {
-          isLeap = false;
-          if(y%400 == 0)
-          {
-             isLeap = true;
-          }
+           isLeap = true;
         }
       }
+    }
     return isLeap;
   }
 
