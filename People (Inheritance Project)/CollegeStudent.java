@@ -65,6 +65,7 @@ public class CollegeStudent extends Student implements Comparable<CollegeStudent
     return 0;
   }
   
+  //Part 3: isEmployable method
   public boolean isEmployable()
   {
     if(this.getAge() >= 18 && this.getAge() <= 22 && this.getGPA() >= 2.5)
