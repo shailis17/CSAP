@@ -34,4 +34,14 @@ public class Teacher extends Person
   {
     return super.toString() + ", Subject: " + subject + ", Years Experience: " + yearsExperience;
   }
+  
+  //Part 3: isEmployable() method
+  public boolean isEmployable()
+  {
+    if(this.getAge() >= 22 && this.getYears() >=5)
+    {
+      return true;
+    }
+    return false;
+  }
 }
