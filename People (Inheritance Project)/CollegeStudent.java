@@ -1,4 +1,4 @@
-public class CollegeStudent extends Student
+public class CollegeStudent extends Student implements Comparable<CollegeStudent>, Employable
 {
   private String year, major;
   private int gradYear;
@@ -49,5 +49,28 @@ public class CollegeStudent extends Student
   public String toString()
   {
     return super.toString() + ", Year: " + year + ", Major: " + major + ", Graduating: " + gradYear;
+  }
+  
+  //Part 2: implement comparable interface
+  public interface Comparable
+  {
+  }
+  
+  public int compareTo(CollegeStudent s)
+  {
+    if(this.getName().compareTo(s.getName()) < 0)
+      return -1;
+    else if(this.getName().compareTo(s.getName()) > 0)
+      return 1;
+    return 0;
+  }
+  
+  public boolean isEmployable()
+  {
+    if(this.getAge() >= 18 && this.getAge() <= 22 && this.getGPA() >= 2.5)
+    {
+      return true;
+    }
+    return false;
   }
 }
