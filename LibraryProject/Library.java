@@ -45,7 +45,7 @@ public class Library
 
     //cl1 returns b2
     if(cl1.returnBook(b2))
-      System.out.println("Thank you for returning " + b2;
+      System.out.println("Thank you for returning " + b2);
     
     //Display the current state of cl1 (call the toString method)
     System.out.println(cl1);
